@@ -1,2 +1,35 @@
-<!--miniprogram/pages/movie/movie.wxml-->
-<text>miniprogram/pages/movie/movie.wxml</text>
+<view class="movie">
+
+  <block wx:for="{{ movieList }}" wx:key="{{ item.id }}">
+    <view class="movie-list">
+      <image class="movie-img" src="{{ item.images.small }}"></image>
+      <view class="movie-info">
+        <view class="movie-info-title"> {{ item.title }}</view>
+
+        <view>
+          <text class="movie-info-item">豆瓣评分</text>
+          <text class="movie-info-rate">{{ item.rating.average }}</text>
+        </view>
+
+        <view>
+          <text class="movie-info-item">主演: </text>
+          <block wx:for="{{ item.casts }}" wx:key="{{ index }}">
+            <text class="movie-info-casts">{{ item.name }}</text>
+          </block>
+        </view>
+
+        <view>
+          <block wx:for="{{ item.genres }}" wx:key="{{ index }}">
+            <van-tag plain type="warning" class="movie-info-genres"> {{ item }} </van-tag>
+          </block>
+        </view>
+
+        <view>
+          <text class="movie-info-item">年份: </text>
+          <text class="movie-info-year">{{ item.year }} </text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<van-notify id="van-notify" />

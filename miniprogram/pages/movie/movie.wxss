@@ -1,1 +1,45 @@
-/* miniprogram/pages/movie/movie.wxss */
+.movie {
+  width: 100%;
+}
+.movie-list {
+  width: 100%;
+  height: 300rpx;
+  padding: 10rpx;
+  border: 1px solid #000;
+  display: flex;
+}
+.movie-list .movie-img {
+  width: 200rpx;
+  height: 300rpx;
+  border-radius: 3px;
+}
+.movie-list .movie-info {
+  flex: 1;
+  padding-left: 10rpx;
+  border: 1px solid #000;
+}
+.movie-list .movie-info-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #777;
+}
+.movie-list .movie-info-item {
+  font-size: 24rpx;
+  color: #7D7D7D;
+}
+.movie-list .movie-info-rate {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #FFBF26;
+}
+.movie-list .movie-info-casts {
+  font-size: 24rpx;
+  color: #7D7D7D;
+  margin-right: 10rpx;
+}
+.movie-list .movie-info-genres {
+  margin-right: 10rpx;
+}
+.movie-list .movie-info-year {
+  color: #7D7D7D;
+}

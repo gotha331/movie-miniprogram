@@ -1,18 +1,53 @@
-// miniprogram/pages/movie/movie.js
+import Notify from 'vant-weapp/notify/notify';
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    movieList: [],
+    start: 0,
+    count: 10
   },
 
+  /**
+   * 获取电影列表
+   */
+  getMovieList: function() {
+    wx.showLoading({
+        title: '加载中',
+      }),
+
+      this.setData({
+        start: this.data.movieList.length
+      })
+
+    wx.cloud.callFunction({
+      name: 'getmovielist',
+      data: {
+        start: this.data.start,
+        count: 10
+      }
+    }).then(res => {
+      console.log(res)
+      wx.hideLoading();
+      this.setData({
+        movieList: this.data.movieList.concat(res.result.subjects)
+      })
+    }).catch(err => {
+      wx.hideLoading();
+      Notify({
+        type: 'warning',
+        message: '加载失败！'
+      });
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getMovieList();
   },
 
   /**
@@ -54,7 +89,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    this.getMovieList();
   },
 
   /**

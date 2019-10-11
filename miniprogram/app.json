@@ -11,7 +11,7 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#ccc",
+    "color": "#000",
     "selectedColor": "#E53D3B",
     "list": [{
         "pagePath": "pages/movie/movie",
