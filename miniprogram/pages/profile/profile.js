@@ -1,4 +1,4 @@
-// pages/deployFunctions/deployFunctions.js
+// pages/profile/profile.js
 Page({
 
   /**
