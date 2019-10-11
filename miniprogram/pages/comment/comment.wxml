@@ -1,0 +1,41 @@
+<!-- <view class="comment">
+  <view class='detail-container' style='background: url({{details.images.large}}) no-repeat  top/cover'></view>
+  <view class='detail-mask'></view>
+  <view class='detail-info'>
+    <image src="{{details.images.large}}" class='detail-img'></image>
+    <view class='detail'>
+      <view class='detail-nm'>{{details.title}}</view>
+      <view>{{details.original_title}}</view>
+      <view class='detail.sc'>{{details.rating.average}}分</view>
+      <view>{{details.countries[0]}}</view>
+      <view>导演：{{details.directors[0].name}}</view>
+    </view>
+  </view>
+</view> -->
+<view class="comment">
+  <view class="detail-container" style="background: url({{ details.images.large }}) no-repeat top/cover"></view>
+  <view class="detail-mask"></view>
+  <view class="detail">
+    <image class="detail-img" src="{{ details.images.small }}"></image>
+    <view class="detail-info">
+      <view class="detail-info-title"> {{ details.title }}</view>
+      <view class="detail-info-original_title"> {{ details.original_title }}</view>
+      <view class="detail-info-rate">{{ details.rating.average }}分</view>
+
+      <block wx:for="{{ details.countries }}" wx:key="{{ index }}">
+        <text> {{ item }}</text>
+      </block>
+
+      <view>导演：
+        <block wx:for="{{ details.directors }}" wx:key="{{ item.id }}">
+          <text> {{ item.name }}</text>
+        </block>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="summary">
+    <text>{{ details.summary }}</text>
+  </view>
+</view>

@@ -3,6 +3,7 @@
   <block wx:for="{{ movieList }}" wx:key="{{ item.id }}">
     <view class="movie-list">
       <image class="movie-img" src="{{ item.images.small }}"></image>
+
       <view class="movie-info">
         <view class="movie-info-title"> {{ item.title }}</view>
 
@@ -28,6 +29,10 @@
           <text class="movie-info-item">年份: </text>
           <text class="movie-info-year">{{ item.year }} </text>
         </view>
+      </view>
+
+      <view class="movie-comment">
+        <van-button size="mini" color="#E53D3B" class="movie-comment-btn" data-movieid="{{ item.id }} " bindtap="gotoComment">评价</van-button>
       </view>
     </view>
   </block>

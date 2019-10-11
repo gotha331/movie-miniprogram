@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "van-notify": "vant-weapp/notify",
+    "van-button": "vant-weapp/button",
     "van-tag": "vant-weapp/tag"
   }
 }
