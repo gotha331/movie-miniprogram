@@ -53,4 +53,12 @@
 .comment .summary {
   font-size: 28rpx;
   text-indent: 2em;
+  margin-bottom: 20rpx;
+}
+.comment .comment-rate {
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+}
+.comment .comment-submit-btn {
+  text-align: center;
 }

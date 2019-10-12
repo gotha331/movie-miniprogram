@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-field": "vant-weapp/field",
+    "van-rate": "vant-weapp/rate",
+    "van-notify": "vant-weapp/notify",
+    "mp-msg": "weui-miniprogram/msg/msg",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-uploader": "weui-miniprogram/uploader/uploader"
+  }
 }
